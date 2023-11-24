@@ -1,0 +1,78 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 15px;
+}
+
+
+
+ul.todo-list-items {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0;
+  box-shadow: 0 8px 8px 4px rgba(0, 0, 0, 20%);
+}
+.list-item {
+  background: var(--input-background);
+  list-style: none;
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.list-item input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.list-item input[type="checkbox"]:checked {
+  background: linear-gradient(
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  ) !important;
+}
+.list-item input[type="checkbox"]:checked label {
+  text-decoration: line-through;
+}
+
+.list-item .todo-label {
+    font-weight: 400;
+}
+
+.form-controls {
+    display: flex;
+    width:100%;
+    font-size:13px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--input-background);
+    margin:0;
+}
+
+.form-controls h2.list-heading {
+    font-weight:400;
+    font-size:15px;
+}
+
+.filter-list {
+    display:flex;
+    gap: 10px;
+    padding:20px 20px;
+}
+.form-controls .btn,
+.filter-list .btn {
+    border:none;
+    font-size:16px;
+    background: var(--input-background);
+}
+
+.form-controls .btn {
+    font-size: 14px;
+}
+
+.filter-list .btn[aria-pressed="true"] {
+    color: hsl(220, 98%, 61%);
+}
