@@ -6,10 +6,14 @@ import { FaRegMoon, FaSun } from "react-icons/fa";
 
 function App() {
   const DATA = [
-    { id: "todo-0", name: "Eat", completed: true },
-    { id: "todo-1", name: "Sleep", completed: false },
-    { id: "todo-2", name: "Rave", completed: false },
-    { id: "todo-3", name: "Repeat", completed: false },
+    {
+      id: "todo-0",
+      name: "Complete online JavaScript course",
+      completed: true,
+    },
+    { id: "todo-1", name: "Jog around the park 3x", completed: false },
+    { id: "todo-2", name: "10 minutes meditation", completed: false },
+    { id: "todo-3", name: "Read for 1 hour", completed: false },
   ];
   const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [theme, setTheme] = useLocalStorage(
@@ -31,8 +35,8 @@ function App() {
         </header>
 
         <ToDoList tasks={DATA} />
-    
       </div>
+        <span className="instructions">Drag and drop to reorder list</span>
     </div>
   );
 }

@@ -8,7 +8,10 @@
     font-size: 18px;
     box-shadow: 0 8px 8px 4px rgba(0, 0, 0, 20%);
   }
-
+  .todo-list form {
+    width:100%;
+  }
   form .btn[type="submit"] {
     display:none;
   }
+

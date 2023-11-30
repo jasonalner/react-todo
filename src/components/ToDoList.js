@@ -44,6 +44,12 @@ function ToDoList(props) {
     setTasks(updatedTasks);
   }
 
+  function deleteTask(id) {
+    const remainingTasks = tasks.filter((task) => id !== task.id);
+    setTasks(remainingTasks);
+  
+  }
+
   function clearCompleted() {
     const updatedTasks = tasks.filter((task) => !task.completed);
     setTasks(updatedTasks);
@@ -58,8 +64,10 @@ function ToDoList(props) {
         completed={task.completed}
         key={task.id}
         toggleTaskCompleted={toggleTaskCompleted}
+        deleteTask={deleteTask}
         reorderTasks={reorderTasks} // Pass the new function to ToDo component
-      />
+  
+        />
     ));
 
   const filterList = FILTER_NAMES.map((name) => (
