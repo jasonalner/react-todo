@@ -20,6 +20,8 @@ function Form(props) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div className="input-container">
+        <span className="checkmark"></span>
       <input
         type="text"
         id="new-todo-input"
@@ -28,6 +30,8 @@ function Form(props) {
         value={name}
         onChange={handleChange}
       />
+      </div>
+
              
 
       <button
